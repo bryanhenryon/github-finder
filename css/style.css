@@ -1,0 +1,246 @@
+:root {
+    --color-primary: #6B6B6B;
+    --fs-h1-small: 36px;
+    --fs-h1-normal: 48px;
+    --fs-h2-small: 32px;
+    --fs-h2-normal: 44px;
+    --fs-h3-small: 20px;
+    --fs-h3-normal: 24px;
+    --fw-normal: 400;
+    --fw-semi: 500;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+a {
+    text-decoration:none;
+    color: var(--color-primary);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-primary);
+}
+
+.container {
+    width:90%;
+    margin:auto;
+}
+
+#header {
+    padding:25px 0;
+    text-align:center;
+}
+
+#header h1 {
+    font-size: var(--fs-h1-small);
+    font-weight: var(--fw-normal);
+    margin-bottom:20px;
+}
+
+#search_user {
+    width:100%;
+    padding:10px 12px;
+    border-radius:25px;
+    outline:none;
+    border:1px solid var(--color-primary);
+    opacity: 0.8;
+    letter-spacing:1px;
+    font-size:13px;
+}
+
+#main-infos {
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:30px
+}
+
+#main-infos #first-part {
+    text-align:center;
+}
+
+#main-infos #first-part img{
+    width:150px;
+    border-radius:50%;
+}
+
+#main-infos #first-part h2{
+    font-size: var(--fs-h2-small);
+    font-weight: var(--fw-normal);
+}
+
+#main-infos #first-part h3{
+    font-size: var(--fs-h3-small);
+    font-weight: var(--fw-normal);
+}
+
+#location {
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+#location .gg-pin {
+    margin-top:0;
+    margin-right:5px;
+}
+
+#main-infos #second-part h3{
+    font-weight:var(--fw-normal);
+    font-size:var(--fs-h3-normal);
+}
+
+#main-infos #second-part p{
+    line-height:1.5;
+}
+
+
+#badges {
+    display:flex;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+    justify-content:center;
+}
+
+.badge {
+    border: 1px solid var(--color-primary);
+    padding:5px 10px 5px 15px;
+    border-radius:25px;
+    margin-right:5px;
+    display:flex;
+    margin:5px;
+}
+
+.number {
+    background:#6B6B6B;
+    color:white;
+    border-radius:25px;
+    padding:10px;
+    font-size:12px;
+    margin-left:5px;
+    height: 18px;
+    display:flex;
+    align-items:center;
+    align-self:center;
+    font-weight:bold;
+}
+
+#seeProfile {
+    border: 2px solid var(--color-primary);
+    padding:10px 30px;
+    border-radius:25px;
+    transition: .2s;
+    font-size:18px;
+    display:flex;
+    justify-content: center;
+    max-width: 400px;
+    margin: 30px auto;
+
+}
+
+#seeProfile:hover {
+    background: var(--color-primary);
+    color:white;
+
+}
+
+#repositories {
+    padding:30px 0;
+}
+
+#repositories h2 {
+    border-bottom:1px solid var(--color-primary);
+    font-weight: var(--fw-normal);
+    margin-bottom:30px;
+}
+
+.repository {
+    border:1px solid var(--color-primary);
+    border-radius:25px;
+    padding: 10px 12px;
+    margin-top:15px;
+}
+
+
+.repository h3{
+    font-weight:var(--fw-normal);
+}
+
+.no-result {
+    font-weight:var(--fw-normal);
+    font-size:var(--fs-h3-small);
+}
+
+@media(min-width:380px) {
+    #search_user {
+        letter-spacing:1px;
+        padding:10px 15px;
+    }
+
+    .container {
+        width:80%;
+    }
+}
+
+@media(min-width:450px) {
+    #search_user {
+        letter-spacing:2px;
+    }
+}
+
+@media(min-width:768px) {
+    #search_user {
+        letter-spacing:5px;
+        padding:15px 25px;
+        max-width:900px;
+    }
+
+    #profile {
+        max-width:1100px;
+    }
+
+    #header h1 {
+        font-size: var(--fs-h1-normal);
+        font-weight: var(--fw-semi);
+        margin-bottom:20px;
+    }
+}
+
+@media(min-width:1024px) {
+    #main-infos {
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+        gap:0px;
+    }
+
+    #main-infos #second-part p{
+        max-width:500px;
+    }
+
+    #badges {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:start;
+        margin-bottom:0;
+        margin-bottom:20px;
+    }
+
+    #seeProfile {
+        display:inline-block;
+        margin-top:20px;
+    }
+
+    .repository {
+        transition: 0.5s;
+    }
+
+    .repository:hover {
+        transform:translateX(50px);
+    }
+
+
+}
